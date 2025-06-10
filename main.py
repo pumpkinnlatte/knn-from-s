@@ -4,7 +4,7 @@ import KNNClassificador as KNN
 def main():
     
     columnas = ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'class']
-    datos = pd.read_csv('data/iris/iris.data', names=columnas)
+    datos = pd.read_csv('datasets/iris/iris.data', names=columnas)
 
     knn_clasificador = KNN.KNNClassificador(k_neighbors=3, data=datos)
 
