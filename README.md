@@ -2,7 +2,6 @@
 
 Este proyecto contiene una implementación simple y didáctica del algoritmo de clasificación **K-Nearest Neighbors (KNN)** en Python, construido completamente desde cero para entender sus fundamentos.
 
-
 ## ¿Qué es KNN?
 
 **K-Nearest Neighbors (KNN)** es un algoritmo de aprendizaje supervisado no paramétrico que se utiliza para tareas de **clasificación** y **regresión**. Su funcionamiento es bastante intuitivo:
@@ -13,23 +12,18 @@ Este proyecto contiene una implementación simple y didáctica del algoritmo de 
 2. **Clasifica Nuevos Puntos**:  
    Para clasificar un nuevo punto de datos, KNN:
 
-   - Calcula la distancia (comúnmente la distancia **euclidiana**) entre el nuevo punto y todos los puntos en el conjunto de entrenamiento.
-   - Identifica los **k puntos de datos más cercanos** (los "vecinos" más próximos) al nuevo punto. El valor de `k` es un número entero que se define previamente.
-   - Asigna al nuevo punto la clase que sea **más frecuente entre esos k vecinos más cercanos**. Esto es una "votación" de mayoría.
-
-> En resumen, los puntos de datos se clasifican según la mayoría de las clases de sus vecinos más cercanos.
+   - Calcula la distancia euclidiana entre el nuevo punto y todos los puntos en el conjunto de entrenamiento.
+   - Identifica los **k puntos de datos más cercanos** al nuevo punto. El valor de `k` es un número entero que se define previamente.
+   - Asigna al nuevo punto la clase que sea **más frecuente entre esos k vecinos más cercanos**. 
 
 ---
-
 
 - **`KNNClassificador.py`**: Contiene la clase `KNNClassificador` con la lógica central del algoritmo KNN, incluyendo el cálculo de distancias y la función de predicción.
 - **`main.py`**: Script principal que carga un conjunto de datos (por defecto, el dataset Iris), inicializa el clasificador KNN y demuestra cómo hacer predicciones.
 - **`data/`**: Carpeta diseñada para almacenar conjuntos de datos. Puedes agregar más datasets para experimentar con diferentes problemas de clasificación.
 
 
-
 ## Cómo Funciona Este Programa
-
 
 ### Inicialización (`KNNClassificador.__init__`)
 
@@ -64,8 +58,6 @@ pip install numpy pandas
 
 ## Uso
 
-### Coloca tus Datos
-
 Asegúrate de que tus archivos de datos (.csv, etc.) estén en la carpeta data/ o en una subcarpeta dentro de ella.
 Este proyecto usa data/iris/iris.data como ejemplo.
 
@@ -78,12 +70,7 @@ python main.py
 El script cargará el dataset Iris, entrenará el clasificador KNN y realizará una predicción para una muestra de ejemplo.
 
 ## Experimenta
-Cambia k_neighbors
-Modifica el valor de k_neighbors en main.py para ver cómo afecta las predicciones.
-
-## Añade Nuevos Datasets
-Puedes agregar tus propios archivos .csv a la carpeta data/ y modificar main.py para cargarlos.
-Recuerda que el programa espera que la última columna sea la etiqueta de clase.
-
-## Prueba Nuevas Muestras
-Cambia los valores en la lista nueva_muestra en main.py para experimentar con diferentes puntos a clasificar.
+- Modifica el valor de k_neighbors en main.py para ver cómo afecta las predicciones.
+- Puedes agregar tus propios archivos .csv a la carpeta data/ y modificar main.py para cargarlos.
+- El programa espera que la ultima columna contenga las etiquetas de clasificacion
+- Cambia los valores en la lista nueva_muestra en main.py para experimentar con diferentes puntos a clasificar.
